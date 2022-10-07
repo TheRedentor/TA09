@@ -7,7 +7,7 @@ import ejercicio5.Alumno;
 
 public class Metodos {
 
-	public Aula[] iniciarAulas() {
+	public static Aula[] iniciarAulas() {
 		Aula[] aulas = new Aula[3];
 		aulas[0] = new Aula(1, 5, Materia.filosofia.toString());
 		aulas[1] = new Aula(2, 8, Materia.fisica.toString());
@@ -16,7 +16,7 @@ public class Metodos {
 		return aulas;
 	 }
 	
-	public Profesor[] iniciarProfesore() {
+	public static Profesor[] iniciarProfesore() {
 		Profesor[] profesores = new Profesor[3];
 		profesores[0] = new Profesor("Jose", 35, "hombre", Materia.matematicas.toString());
 		profesores[1] = new Profesor("Mar�a", 45, "mujer", Materia.filosofia.toString());
@@ -25,7 +25,7 @@ public class Metodos {
 		return profesores;
 	}
 	
-	public Alumno[] iniciarAlumnos() {
+	public static Alumno[] iniciarAlumnos() {
 		Alumno[] alumnos = new Alumno[10];
 		
 		alumnos[0] = new Alumno("Pepe", 13, "hombre", 7);
