@@ -26,11 +26,11 @@ public class Aula {
 	}
 
 
-	public boolean hayClases(ArrayList<Alumno> alumnos, Profesor profesor) {
+	public boolean hayClases(Alumno[] alumnos, Profesor profesor) {
 
-		//Si el profesor asistió y es el profesor de la misma materia del aula entonces me fijo la asistencia de los alumnos y, si es mayor a 50%, retorno true
+		//Si el profesor asistió y es el profesor de la misma materia del aula entonces me fijo la asistencia de los alumnos, est
 		if(profesor.asistio && profesor.materia == this.materia) {
-			int totalAlumnos = alumnos.size();
+			int totalAlumnos = alumnos.length;
 			int alumnosPresentes = 0;
 			for(Alumno al : alumnos) {
 				if(al.asistio)
