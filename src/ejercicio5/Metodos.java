@@ -41,4 +41,19 @@ public class Metodos {
 		
 		return alumnos;
 	}
+	
+	public static void imprimirHayClases(Aula aulas[], Profesor profes[], Alumno alumnos[]) {
+		//simulación de si hay clases o no
+				for(int i=0;i<profes.length;i++) {
+					for(int j=0; j<aulas.length; j++) {
+						if(profes[i].getMateria().equals(aulas[j].getMateria())) {
+							if(aulas[j].hayClases(alumnos, profes[i])) {
+								System.out.println("Hay clases de " + profes[i].getMateria() + " en aula N°"+(j+1));
+							} else {
+								System.out.println("No hay clases de " + profes[i].getMateria());
+							}
+						}
+					}
+				}
+	}
 }
