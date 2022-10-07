@@ -8,11 +8,13 @@ public class Profesor extends Persona {
 	public Profesor() {
 		super();
 		this.materia = "";
+		this.asistio = asistenciaAula();
 	}
 
 	public Profesor(String materia) {
 		super();
 		this.materia = materia;
+		this.asistio = asistenciaAula();
 	}
 
 	@Override
