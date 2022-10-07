@@ -22,9 +22,11 @@ public class Aula {
 		this.numMaxEstudiantes = numMaxEstudiantes;
 		this.materia = materia;
 	}
-	
-	
-	
-	
+
+
+	@Override
+	public String toString() {
+		return "Aula [idNum=" + idNum + ", numMaxEstudiantes=" + numMaxEstudiantes + ", materia=" + materia + "]";
+	}
 	
 }

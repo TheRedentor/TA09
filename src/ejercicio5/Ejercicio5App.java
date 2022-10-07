@@ -3,7 +3,9 @@ package ejercicio5;
 public class Ejercicio5App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Alumno al = new Alumno();
+		
+		System.out.println(al.asistenciaAula());
 
 	}
 
