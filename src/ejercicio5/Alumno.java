@@ -24,8 +24,7 @@ public class Alumno extends Persona {
 
 	@Override
 	public String toString() {
-		return "Alumno [nota=" + nota + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + ", asistio="
-				+ asistio + "]";
+		return "Alumno [nota=" + nota + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + ", asistio=" + asistio + "]";
 	}
 
 	@Override
