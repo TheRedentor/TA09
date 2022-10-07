@@ -18,6 +18,7 @@ public class Alumno extends Persona {
 
 	public Alumno(String nombre, int edad, String sexo, int nota) {
 		super(nombre, edad, sexo);
+		this.asistio = asistenciaAula();
 		this.nota = nota;
 	}
 
