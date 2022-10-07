@@ -11,8 +11,8 @@ public class Profesor extends Persona {
 		this.asistio = asistenciaAula();
 	}
 
-	public Profesor(String materia) {
-		super();
+	public Profesor(String nombre, int edad, String sexo, String materia) {
+		super(nombre, edad, sexo);
 		this.materia = materia;
 		this.asistio = asistenciaAula();
 	}
