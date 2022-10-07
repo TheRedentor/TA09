@@ -35,4 +35,8 @@ public class Profesor extends Persona {
 		}
 	} 
 	
+	public String getMateria() {
+		return materia;
+	}
+	
 }

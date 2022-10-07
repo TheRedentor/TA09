@@ -52,4 +52,8 @@ public class Aula {
 		return "Aula [idNum=" + idNum + ", numMaxEstudiantes=" + numMaxEstudiantes + ", materia=" + materia + "]";
 	}
 	
+	public String getMateria() {
+		return materia;
+	}
+	
 }
