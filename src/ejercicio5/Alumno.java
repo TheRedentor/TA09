@@ -13,13 +13,21 @@ public class Alumno extends Persona {
 	public Alumno(int nota) {
 		super();
 		this.asistio = asistenciaAula();
-		this.nota = nota;
+		this.nota = verificarNota(nota);
 	}
 
 	public Alumno(String nombre, int edad, String sexo, int nota) {
 		super(nombre, edad, sexo);
 		this.asistio = asistenciaAula();
-		this.nota = nota;
+		this.nota = verificarNota(nota);
+	}
+	
+	public int verificarNota(int nota) {
+		if(nota>=0 && nota<=10) {
+			return nota;
+		} else {
+			return 0;
+		}
 	}
 
 	@Override
