@@ -7,11 +7,13 @@ public class Alumno extends Persona {
 
 	public Alumno() {
 		super();
+		this.asistio = asistenciaAula();
 		this.nota = 0;
 	}
 
 	public Alumno(int nota) {
 		super();
+		this.asistio = asistenciaAula();
 		this.nota = nota;
 	}
 
@@ -30,9 +32,8 @@ public class Alumno extends Persona {
 		Random r = new Random();
 		int random = r.nextInt(100);
 		
-		if(random>51) {
+		if(random>50) {
 			return true;
-			
 		}else {
 			return false;
 		}

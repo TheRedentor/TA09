@@ -18,6 +18,8 @@ public abstract class Persona {
 		this.sexo = sexo;
 	}
 	
+	
+	
 	public abstract boolean asistenciaAula();
 	
 }
