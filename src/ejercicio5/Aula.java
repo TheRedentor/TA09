@@ -30,7 +30,7 @@ public class Aula {
 
 		//Si el profesor asistió y es el profesor de la misma materia del aula entonces me fijo la asistencia de los alumnos, est
 		if(profesor.asistio && profesor.materia == this.materia) {
-			int totalAlumnos = alumnos.length;
+			int totalAlumnos = this.numMaxEstudiantes;
 			int alumnosPresentes = 0;
 			for(Alumno al : alumnos) {
 				if(al.asistio)
