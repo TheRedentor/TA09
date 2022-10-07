@@ -1,25 +1,25 @@
 package ejercicio5;
 
+import java.util.Hashtable;
 import java.util.Random;
 
 public class Alumno extends Persona {
-	int nota;
+	Hashtable<String, Integer> notas;
 
 	public Alumno() {
 		super();
 		this.asistio = asistenciaAula();
-		this.nota = 0;
 	}
 
-	public Alumno(int nota) {
+	public Alumno(Hashtable<String, Integer> notas) {
 		super();
 		this.asistio = asistenciaAula();
-		this.nota = nota;
+		this.notas = notas;
 	}
 
-	public Alumno(String nombre, int edad, String sexo, int nota) {
+	public Alumno(String nombre, int edad, String sexo, Hashtable<String, Integer> notas) {
 		super(nombre, edad, sexo);
-		this.nota = nota;
+		this.notas = notas;
 	}
 
 	@Override
