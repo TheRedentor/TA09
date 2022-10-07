@@ -3,6 +3,9 @@ package ejercicio5;
 import ejercicio5.Aula;
 import ejercicio5.Materia;
 import ejercicio5.Profesor;
+
+import java.util.ArrayList;
+
 import ejercicio5.Alumno;
 
 public class Metodos {
@@ -55,5 +58,27 @@ public class Metodos {
 				}
 			}
 		}
+	}
+	
+	public static void imprimirAlumnosPorGenero (Alumno alumnos[]) {
+		ArrayList<Alumno> hombres = new ArrayList<>();
+		ArrayList<Alumno> mujeres = new ArrayList<>();
+		
+		for(int i = 0; i<alumnos.length; i++) {
+			if(alumnos[i].getSexo() == "hombre") {
+				hombres.add(alumnos[i]);
+			} else {
+				mujeres.add(alumnos[i]);
+			}
+		}
+		
+		System.out.println("---------Estudiantes hombres----------");
+		hombres.forEach((alumno)->{
+			System.out.println(alumno.toString());
+		});
+		System.out.println("---------Estudiantes mujeres----------");
+		mujeres.forEach((alumna)->{
+			System.out.println(alumna.toString());
+		});
 	}
 }

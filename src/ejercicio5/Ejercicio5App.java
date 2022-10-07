@@ -14,7 +14,7 @@ public class Ejercicio5App {
         System.out.println(Arrays.toString(profes));
         
         Metodos.imprimirHayClases(aulas, profes, alumnos);
-        
+        Metodos.imprimirAlumnosPorGenero(alumnos);
 		
 	}
 	
