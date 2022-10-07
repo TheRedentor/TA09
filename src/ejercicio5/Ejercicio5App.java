@@ -9,9 +9,9 @@ public class Ejercicio5App {
         Profesor[] profes = Metodos.iniciarProfesore();
         Alumno[] alumnos = Metodos.iniciarAlumnos();
 
-        System.out.println(Arrays.toString(aulas));
+       /* System.out.println(Arrays.toString(aulas));
         System.out.println(Arrays.toString(alumnos));
-        System.out.println(Arrays.toString(profes));
+        System.out.println(Arrays.toString(profes)); */
         
         Metodos.imprimirHayClases(aulas, profes, alumnos);
         Metodos.imprimirAlumnosPorGenero(alumnos);

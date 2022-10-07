@@ -5,6 +5,7 @@ import ejercicio5.Materia;
 import ejercicio5.Profesor;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import ejercicio5.Alumno;
 
@@ -51,7 +52,7 @@ public class Metodos {
 			for (int j = 0; j < aulas.length; j++) {
 				if (profes[i].getMateria().equals(aulas[j].getMateria())) {
 					if (aulas[j].hayClases(alumnos, profes[i])) {
-						System.out.println("Hay clases de " + profes[i].getMateria() + " en el aula N°" + (j + 1));
+						mostrarAula(aulas, profes, alumnos, j);
 					} else {
 						System.out.println("No hay clases de " + profes[i].getMateria());
 					}
@@ -72,13 +73,30 @@ public class Metodos {
 			}
 		}
 		
-		System.out.println("---------Estudiantes hombres----------");
+		System.out.println("\n---------Estudiantes hombres----------");
 		hombres.forEach((alumno)->{
 			System.out.println(alumno.toString());
 		});
-		System.out.println("---------Estudiantes mujeres----------");
+		System.out.println("\n---------Estudiantes mujeres----------");
 		mujeres.forEach((alumna)->{
 			System.out.println(alumna.toString());
 		});
+	}
+	
+	public static void mostrarAula(Aula aulas[], Profesor profes[], Alumno alumnos[], int j) {
+		System.out.println("Aula Nº "+ j);
+		System.out.println("\nMateria: "+aulas[j].getMateria());
+		
+		for (int i = 0; i < profes.length; i++) {
+			if(aulas[j].getMateria().equals(profes[i].getMateria())) {
+				System.out.println("Profesor: "+profes[i].getNombre());
+			}
+		}
+		
+		System.out.println("Alumnos: \n");
+		
+		for (int i = 0; i < aulas[j].getNumMaxEstudiantes(); i++) {
+			System.out.println(alumnos[i].toString());
+		}
 	}
 }

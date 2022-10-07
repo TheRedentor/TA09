@@ -23,5 +23,11 @@ public abstract class Persona {
 	public String getSexo() {
 		return sexo;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+	
+	
 	
 }

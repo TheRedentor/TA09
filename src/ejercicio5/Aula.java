@@ -55,5 +55,17 @@ public class Aula {
 	public String getMateria() {
 		return materia;
 	}
+
+
+	public int getIdNum() {
+		return idNum;
+	}
+
+
+	public int getNumMaxEstudiantes() {
+		return numMaxEstudiantes;
+	}
+	
+	
 	
 }
