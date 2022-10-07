@@ -15,6 +15,11 @@ public class Alumno extends Persona {
 		this.nota = nota;
 	}
 
+	public Alumno(String nombre, int edad, String sexo, int nota) {
+		super(nombre, edad, sexo);
+		this.nota = nota;
+	}
+
 	@Override
 	public String toString() {
 		return "Alumno [nota=" + nota + "]";
@@ -31,7 +36,6 @@ public class Alumno extends Persona {
 		}else {
 			return false;
 		}
-		
 		
 	}
 	
