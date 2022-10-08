@@ -54,7 +54,7 @@ public class Metodos {
 					if (aulas[j].hayClases(alumnos, profes[i])) {
 						mostrarAula(aulas, profes, alumnos, j);
 					} else {
-						System.out.println("No hay clases de " + profes[i].getMateria());
+						System.out.println("No hay clases de " + profes[i].getMateria() + " en el aula " + (j+1));
 					}
 				}
 			}
@@ -84,7 +84,7 @@ public class Metodos {
 	}
 	
 	public static void mostrarAula(Aula aulas[], Profesor profes[], Alumno alumnos[], int j) {
-		System.out.println("Aula Nº "+ j);
+		System.out.println("Aula Nº "+ (j+1));
 		System.out.println("\nMateria: "+aulas[j].getMateria());
 		
 		for (int i = 0; i < profes.length; i++) {
@@ -98,5 +98,6 @@ public class Metodos {
 		for (int i = 0; i < aulas[j].getNumMaxEstudiantes(); i++) {
 			System.out.println(alumnos[i].toString());
 		}
+		System.out.println("-----------------------------");
 	}
 }

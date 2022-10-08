@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Alumno extends Persona {
 	int nota;
+	final int NOTA_DEF = 0;
 
 	public Alumno() {
 		super();
@@ -26,7 +27,7 @@ public class Alumno extends Persona {
 		if(nota>=0 && nota<=10) {
 			return nota;
 		} else {
-			return 0;
+			return NOTA_DEF;
 		}
 	}
 
