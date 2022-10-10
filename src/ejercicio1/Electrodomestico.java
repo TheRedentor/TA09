@@ -54,34 +54,32 @@ public abstract class Electrodomestico {
 		return peso;
 	}
 	
-	public static String comprobarColor(String color) {
-		
-		if (color.toLowerCase().equals("blanco") || color.toLowerCase().equals("negro") || color.toLowerCase().equals("rojo") || color.toLowerCase().equals("azul") || color.toLowerCase().equals("gris")) {
-			
+	public String comprobarColor(String color) {
+		boolean esValido = false;
+		for(Colores col: Colores.values()) {
+			if(color.toLowerCase().equals(col.toString().toLowerCase())) {
+				esValido = true;
+			}
+		}
+		if(esValido) {
 			return color;
-			
-		}
-		
-		else {
-			
+		} else {
 			return COLOR;
-			
 		}
-		
 	}
 	
-	public static char comprobarConsumoEnergetico(char consumoEnergetico) {
-		
-		if (consumoEnergetico == 'A' || consumoEnergetico == 'B' || consumoEnergetico == 'C' || consumoEnergetico == 'D' || consumoEnergetico == 'E' || consumoEnergetico == 'F') {
-			
-			return consumoEnergetico;
-			
+	
+	public char comprobarConsumoEnergetico(char consumoE) {
+		boolean esValido = false;
+		for(ConsumoEnergetico ce: ConsumoEnergetico.values()) {
+			if(consumoE == ce.toString().charAt(0)) {
+				esValido =true;
+			}
 		}
-		
+		if(esValido)
+			return consumoE;
 		else {
-			
 			return CONSUMO_ENERGETICO;
-			
 		}
 		
 	}

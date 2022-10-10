@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public class Lavadora {
+public class Lavadora extends Electrodomestico {
 	private double carga;
 	private final double CARGA_DEF = 5.0;
 	
@@ -14,7 +14,7 @@ public class Lavadora {
 		this.carga =CARGA_DEF;
 	}
 	
-	public Lavadora(int precioBase, int peso, String color, char consumoEnergetico, double carga) {
+	public Lavadora(int precioBase, String color, char consumoEnergetico, int peso, double carga) {
 		super(precioBase, peso, color, consumoEnergetico);
 		this.carga = carga;
 	}
