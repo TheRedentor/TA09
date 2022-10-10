@@ -84,7 +84,7 @@ public abstract class Electrodomestico {
 		
 	}
 	
-	public static int precioFinal(int precioBase, int peso, int consumoEnergetico) {
+	public int precioFinal() {
 		
 		int precioFinal = precioBase;
 		

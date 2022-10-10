@@ -20,7 +20,7 @@ public class Television extends Electrodomestico{
 	}
 	
 	public Television(int precioBase, String color, char consumoEnergetico, int peso, double resolucion, boolean sintonizadorTDT) {
-		super(precioBase, peso, color, consumoEnergetico);
+		super(precioBase,color,consumoEnergetico,peso);
 		this.resolucion = resolucion;
 		this.sintonizadorTDT = sintonizadorTDT;
 	}
