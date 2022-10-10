@@ -7,7 +7,6 @@ public class Espectador {
 	private float dinero;
 	
 	public Espectador(String nombre, int edad, float dinero) {
-		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dinero = dinero;
