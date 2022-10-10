@@ -30,7 +30,6 @@ public class Serie implements Entregable {
 		this.creador = creador;
 		this.genero = checkGenero(genero);
 		this.nTemporadas = nTemporadas;
-		this.entregado = entregado;
 	}
 	
 	public void imprimirDatos() {
