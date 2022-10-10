@@ -2,8 +2,8 @@ package ejercicio6;
 
 public class Pelicula {
 	
-	String titulo, director;
-	int duracion, edadMinima;
+	private String titulo, director;
+	private int duracion, edadMinima;
 	
 	public Pelicula(String titulo, String director, int duracion, int edadMinima) {
 		super();

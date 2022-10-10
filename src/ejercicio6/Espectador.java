@@ -2,9 +2,9 @@ package ejercicio6;
 
 public class Espectador {
 	
-	String nombre;
-	int edad;
-	float dinero;
+	private String nombre;
+	private int edad;
+	private float dinero;
 	
 	public Espectador(String nombre, int edad, float dinero) {
 		super();
