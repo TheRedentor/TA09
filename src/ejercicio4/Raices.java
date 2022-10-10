@@ -27,4 +27,38 @@ public class Raices {
 		} else return false;
 	}
 	
+	public void calcular() {
+		
+		double discriminante = getDiscriminate();
+		
+		if(tieneRaices()) {
+			double solucion1 = (-b+Math.sqrt(discriminante))/(2*a);
+			double solucion2= (-b-Math.sqrt(discriminante))/(2*a);
+			System.out.println("La ecuación tiene 2 soluciones: " + solucion1 + " y " + solucion2);
+		} else if(tieneRaiz()) {
+			double solucion = (-b)/(2*a);
+			System.out.println("La solución es " + solucion);
+		} else {
+			System.out.println("No tiene solución");
+		}
+	}
+	
+	public void obtenerRaices() {
+		if(tieneRaices()) {
+			double raices = Math.sqrt(getDiscriminate());
+			System.out.println("Las raíces son " + raices + " y " + (-raices));
+		} else {
+			System.out.println("La ecuación no posee 2 raíces");
+		}
+	}
+	
+	public void obtenerRaiz() {
+		if(tieneRaiz()) {
+			double raiz = Math.sqrt(getDiscriminate());
+			System.out.println("La raíz es " + raiz);
+		} else {
+			System.out.println("La ecuación no posee una raíz");
+		}
+	}
+	
 }
