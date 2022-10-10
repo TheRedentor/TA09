@@ -31,6 +31,14 @@ public class Videojuego implements Entregable{
 		this.entregado=ENTREGADO_DEF;
 	}
 	
+	public Videojuego compareTo(Videojuego videojuego1) {
+		if(horasEstimadas>videojuego1.getHorasEstimadas()) {
+			return new Videojuego(titulo, genero, company, horasEstimadas);
+		} else {
+			return videojuego1;
+		}
+	}
+	
 	public void entregar() {
 		entregado = true;
 	}

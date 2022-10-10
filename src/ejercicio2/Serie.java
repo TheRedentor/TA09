@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Serie {
+public class Serie implements Entregable {
 
 	private String titulo, creador, genero;
 	private int nTemporadas;
