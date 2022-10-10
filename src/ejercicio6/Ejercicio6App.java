@@ -3,14 +3,19 @@ package ejercicio6;
 public class Ejercicio6App {
 
 	public static void main(String[] args) {
+		//creamos los espectadores
 		Espectador[] espectadores = iniciarEspectadores();
+		//Creamos la película
 		Pelicula kungFusion = new Pelicula("Kung Fu Sion", "juan perez", 120, 16);
-		Cine cine = new Cine("Kung Fu Sion", 10);
-		cine.sentarEspectadores(espectadores, kungFusion);
-		
+		//iniciamos el cine
+		Cine cine = new Cine(kungFusion, 10);
+		//Asignamos los asientos a los espectadores
+		cine.sentarEspectadores(espectadores);
+		//Imprimimos los asientos ocupados y vacíos
 		cine.mostrarSala();
 	}
-
+	
+	//Crea un array con 20 espectadores con edad y dinero aleatorio
 	public static Espectador[] iniciarEspectadores() {
 		Espectador[] espectadores = new Espectador[20];
 		
