@@ -25,7 +25,7 @@ public class Serie implements Entregable {
 		this.entregado = ENTREGADO_DEF;
 	}
 
-	public Serie(String titulo, String creador, String genero, int nTemporadas, boolean entregado) {
+	public Serie(String titulo, String creador, String genero, int nTemporadas) {
 		this.titulo = titulo;
 		this.creador = creador;
 		this.genero = checkGenero(genero);
@@ -104,5 +104,12 @@ public class Serie implements Entregable {
 		return nTemporadas;
 	}
 	
+	public Serie compareTo(Serie s) {
+		if (nTemporadas>s.getnTemporadas()) {
+			return new Serie(titulo, creador, genero, nTemporadas);
+		} else {
+			return s;
+		}
+	}
 
 }
