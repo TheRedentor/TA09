@@ -6,30 +6,32 @@ public class Ejercicio1App {
 
 	public static void main(String[] args) {
 		
-		int precioElectrodomesticos = 0;
-		int precioLavadoras = 0; 
-		int precioTelevisiones = 0;
+		int precioTotalElectrodomesticos = 0;
+		int precioTotalLavadoras = 0; 
+		int precioTotalTelevisiones = 0;
 		Electrodomestico[] electrodomesticos = iniciarElectrodomesticos();
 		
+		//sumamos el precio total separando seg√∫n sea electrodom√©stico general, televisor o lavadora
 		for(int i = 0; i < electrodomesticos.length; i++) {
 			if (electrodomesticos[i] instanceof Electrodomestico) {
-				precioElectrodomesticos += electrodomesticos[i].precioFinal();
+				precioTotalElectrodomesticos += electrodomesticos[i].precioFinal();
 			}
 			if (electrodomesticos[i] instanceof Lavadora) {
-				precioLavadoras += electrodomesticos[i].precioFinal();
+				precioTotalLavadoras += electrodomesticos[i].precioFinal();
 			}
 			else if (electrodomesticos[i] instanceof Television) {
-				precioTelevisiones += electrodomesticos[i].precioFinal();
+				precioTotalTelevisiones += electrodomesticos[i].precioFinal();
 			}
 			
 		}
 		
-		System.out.println("ElectrodomÈsticos: " + precioElectrodomesticos + "Ä");
-		System.out.println("Lavadoras: " + precioLavadoras + "Ä");
-		System.out.println("Televisiones: " + precioTelevisiones + "Ä");
+		System.out.println("ElectrodomÔøΩsticos: " + precioTotalElectrodomesticos + "ÔøΩ");
+		System.out.println("Lavadoras: " + precioTotalLavadoras + "ÔøΩ");
+		System.out.println("Televisiones: " + precioTotalTelevisiones + "ÔøΩ");
 
 	}
 	
+	//creamos electrodom√©sticos, televisores  lavadoras
 	public static Electrodomestico[] iniciarElectrodomesticos() {
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
 		electrodomesticos[0] = new Electrodomestico(110, "Negro", 'D', 60);
