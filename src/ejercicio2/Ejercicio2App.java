@@ -3,7 +3,7 @@ package ejercicio2;
 public class Ejercicio2App {
 
 	public static void main(String[] args) {
-
+		// Declaraci√≥n de Variables
 		Serie[] series = iniciarSeries();
 		Videojuego[] videojuegos = iniciarVideojuegos();
 		
@@ -13,12 +13,14 @@ public class Ejercicio2App {
 		videojuegos[2].entregar();
 		videojuegos[3].entregar();
 		
+		// Ejecutar los m√©todos
 		devolucion(series, videojuegos);
 		
 		compararDuracion(series, videojuegos);
 		
 	}
-
+	
+	// Inicializar series
 	public static Serie[] iniciarSeries() {
 		Serie[] series = new Serie[5];
 
@@ -30,7 +32,8 @@ public class Ejercicio2App {
 
 		return series;
 	}
-
+	
+	// Inicializar videojuegos
 	public static Videojuego[] iniciarVideojuegos() {
 		Videojuego[] videojuegos = new Videojuego[5];
 		
@@ -42,7 +45,8 @@ public class Ejercicio2App {
 		
 		return videojuegos;
 	}
-
+	
+	// Total de series y videojuegos entregados
 	public static void devolucion(Serie[] series, Videojuego[] videojuegos) {
 		int contS = 0;
 		int contV = 0;
@@ -67,7 +71,8 @@ public class Ejercicio2App {
 		System.out.println("Se han entregado "+contV+" videojuegos.");
 		
 	}
-
+	
+	// Comparar la duraci√≥n estimada de los videojuegos y las temporadas de las series
 	public static void compararDuracion(Serie[] series, Videojuego[] videojuegos) {
 		
 		Serie s = new Serie();
@@ -77,14 +82,14 @@ public class Ejercicio2App {
 			s = series[i].compareTo(series[i]);
 		}
 		
-		System.out.println("\nEsta es la serie con m·s temporadas:");
+		System.out.println("\nEsta es la serie con mÔøΩs temporadas:");
 		s.imprimirDatos();
 		
 		for (int i = 0; i < videojuegos.length; i++) {
 			v = videojuegos[i].compareTo(videojuegos[i]);
 		}
 		
-		System.out.println("\nEste es el videojuego con m·s horas estimadas: ");
+		System.out.println("\nEste es el videojuego con mÔøΩs horas estimadas: ");
 		System.out.println(v.toString());
 	}
 }
