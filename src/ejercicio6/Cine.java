@@ -16,19 +16,22 @@ public class Cine {
 	
 	public void sentarEspectadores(Espectador[] espectadores, Pelicula pelicula) {	
 		for (int i = 0; i < espectadores.length; i++) {
+			//Si el espectador posee el dinero y si tiene la edad mínima
 			if(espectadores[i].getDinero()>=precio && espectadores[i].getEdad()>=pelicula.getEdadMinima()) {
 				boolean estaOcupado = true;
 				do {
 					int[] ubicacion = getAsientoAleatorio();
-					if(sala[ubicacion[0]][ubicacion[1]] == "") {
+					if(sala[ubicacion[0]][ubicacion[1]] == null) {
 						sala[ubicacion[0]][ubicacion[1]] = espectadores[i].getNombre();
 						estaOcupado = false;
+						System.out.println(espectadores[i].getNombre() + " entró");
 					}
 				} while (estaOcupado == true);
 			}
 		}	
 	}
 	
+	//El m
 	public int[] getAsientoAleatorio() {
 		int[] filaColumna = new int[2];
 		Random ran = new Random();
