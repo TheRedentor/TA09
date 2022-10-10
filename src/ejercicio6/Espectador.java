@@ -1,11 +1,34 @@
 package ejercicio6;
 
+import java.util.Random;
+
 public class Espectador {
 	
 	String nombre;
 	int edad;
 	float dinero;
 	
+	public Espectador() {
+		super();
+		Random r1 = new Random();
+		Random r2 = new Random();
+		
+		this.edad = r1.nextInt(90);
+		this.dinero = r2.nextInt(50);
+	}
+	
+	
+
+	public Espectador(String nombre) {
+		super();
+		Random r1 = new Random();
+		Random r2 = new Random();
+		
+		this.nombre = nombre;
+		this.edad = r1.nextInt(90);
+		this.dinero = r2.nextInt(50);
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
