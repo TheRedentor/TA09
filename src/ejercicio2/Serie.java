@@ -55,6 +55,18 @@ public class Serie {
 		}
 		return esValido ? genero : "";
 	}
+	
+	public void entregar() {
+		entregado = true;
+	}
+	
+	public void devolver() {
+		entregado = false;
+	}
+	
+	public boolean isEntregado() {
+		return entregado;
+	}
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
@@ -75,5 +87,22 @@ public class Serie {
 	public void setEntregado(boolean entregado) {
 		this.entregado = entregado;
 	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public String getCreador() {
+		return creador;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public int getnTemporadas() {
+		return nTemporadas;
+	}
+	
 
 }
