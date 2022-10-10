@@ -1,7 +1,5 @@
 package ejercicio1;
 
-import java.util.Arrays;
-
 import ejercicio1.Electrodomestico;
 
 public class Ejercicio1App {
@@ -26,9 +24,9 @@ public class Ejercicio1App {
 			
 		}
 		
-		System.out.println("ElectrodomÃ©sticos: " + precioElectrodomesticos + "â‚¬");
-		System.out.println("Lavadoras: " + precioLavadoras + "â‚¬");
-		System.out.println("Televisiones: " + precioTelevisiones + "â‚¬");
+		System.out.println("Electrodomésticos: " + precioElectrodomesticos + "€");
+		System.out.println("Lavadoras: " + precioLavadoras + "€");
+		System.out.println("Televisiones: " + precioTelevisiones + "€");
 
 	}
 	
