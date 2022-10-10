@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public abstract class Electrodomestico {
+public class Electrodomestico {
 	
 	public int precioBase;
 	public String color;
