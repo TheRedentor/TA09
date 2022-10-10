@@ -1,7 +1,5 @@
 package ejercicio5;
 
-import java.util.ArrayList;
-
 public class Aula {
 	// Atributos
 	private int idNum;
@@ -28,8 +26,7 @@ public class Aula {
 	//MÈtodo para comprobar si hay clase
 	public boolean hayClases(Alumno[] alumnos, Profesor profesor) {
 
-		//Si el profesor asisti√≥ y es el profesor de la misma materia del aula entonces me fijo la asistencia de los alumnos, est
-		if(profesor.asistio && profesor.materia == this.materia) {
+		if(profesor.asistio) {
 			int totalAlumnos = this.numMaxEstudiantes;
 			int alumnosPresentes = 0;
 			for(Alumno al : alumnos) {
