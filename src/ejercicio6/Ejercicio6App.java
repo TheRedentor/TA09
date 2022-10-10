@@ -7,6 +7,8 @@ public class Ejercicio6App {
 		Pelicula kungFusion = new Pelicula("Kung Fu Sion", "juan perez", 120, 16);
 		Cine cine = new Cine("Kung Fu Sion", 10);
 		cine.sentarEspectadores(espectadores, kungFusion);
+		
+		cine.mostrarSala();
 	}
 
 	public static Espectador[] iniciarEspectadores() {

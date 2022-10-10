@@ -24,7 +24,7 @@ public class Cine {
 					if(sala[ubicacion[0]][ubicacion[1]] == null) {
 						sala[ubicacion[0]][ubicacion[1]] = espectadores[i].getNombre();
 						estaOcupado = false;
-						System.out.println(espectadores[i].getNombre() + " entró");
+						//System.out.println(espectadores[i].getNombre() + " entró");
 					}
 				} while (estaOcupado == true);
 			}
@@ -59,4 +59,19 @@ public class Cine {
 		this.precio = precio;
 	}
 	
+	public void mostrarSala() {
+		String cadena = "ABCDEFGH";
+		
+		for (int i = 7; i >=0; i--) {
+			for (int j = 0; j < 8; j++) {
+				if(sala[i][j] != null) {
+					System.out.print(i+1+""+cadena.charAt(j)+" "+sala[i][j].toString()+" ");
+				}else {
+					System.out.print(i+1+""+cadena.charAt(j)+" vacio ");
+				}
+				
+			}
+			System.out.println("");
+		}
+	}
 }
