@@ -5,6 +5,12 @@ public class Cine {
 	protected String pelicula;
 	protected float precio;
 	
+	public Cine(String pelicula, float precio) {
+		super();
+		this.pelicula = pelicula;
+		this.precio = precio;
+	}
+
 	public String getPelicula() {
 		return pelicula;
 	}

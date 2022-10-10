@@ -5,6 +5,14 @@ public class Pelicula {
 	String titulo, director;
 	int duracion, edadMinima;
 	
+	public Pelicula(String titulo, String director, int duracion, int edadMinima) {
+		super();
+		this.titulo = titulo;
+		this.director = director;
+		this.duracion = duracion;
+		this.edadMinima = edadMinima;
+	}
+
 	public String getTitulo() {
 		return titulo;
 	}
