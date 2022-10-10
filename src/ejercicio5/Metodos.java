@@ -35,7 +35,7 @@ public class Metodos {
 		Alumno[] alumnos = new Alumno[10];
 
 		alumnos[0] = new Alumno("Pepe", 13, "hombre", 7);
-		alumnos[1] = new Alumno("Maria", 12, "mujer", 9);
+		alumnos[1] = new Alumno("Maria", 12, "mujer", 3);
 		alumnos[2] = new Alumno("Luis", 12, "hombre", 4);
 		alumnos[3] = new Alumno("Oscar", 15, "hombre", 6);
 		alumnos[4] = new Alumno("Ana", 14, "mujer", 7);
@@ -79,11 +79,16 @@ public class Metodos {
 		
 		System.out.println("\n---------Estudiantes hombres----------");
 		hombres.forEach((alumno)->{
-			System.out.println(alumno.toString());
+			if(comprobarAprobado(alumno)) {
+				System.out.println(alumno.toString());
+			}
+			
 		});
 		System.out.println("\n---------Estudiantes mujeres----------");
 		mujeres.forEach((alumna)->{
+			if(comprobarAprobado(alumna)) {
 			System.out.println(alumna.toString());
+			}
 		});
 	}
 	
@@ -104,5 +109,16 @@ public class Metodos {
 			System.out.println(alumnos[i].toString());
 		}
 		System.out.println("-----------------------------");
+	}
+	
+	public static boolean comprobarAprobado(Alumno alumno) {
+		boolean b = true;
+		
+		if(alumno.getNota()>=5) {
+			b = true;
+		}else {
+			b=false;
+		}
+		return b;
 	}
 }
