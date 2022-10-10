@@ -55,10 +55,9 @@ public class Alumno extends Persona {
 		}
 		
 	}
-	
-	
-	
-	
-	
+
+	public int getNota() {
+		return nota;
+	}
 	
 }
