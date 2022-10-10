@@ -1,6 +1,6 @@
 package ejercicio2;
 
-public class Videojuego {
+public class Videojuego implements Entregable{
 	private String titulo, genero, company;
 	private int horasEstimadas;
 	private boolean entregado;
@@ -30,7 +30,19 @@ public class Videojuego {
 		this.horasEstimadas = horasEstimadas;
 		this.entregado=ENTREGADO_DEF;
 	}
-
+	
+	public void entregar() {
+		entregado = true;
+	}
+	
+	public void devolver() {
+		entregado = false;
+	}
+	
+	public boolean isEntregado() {
+		return entregado;
+	}
+	
 	public String getTitulo() {
 		return titulo;
 	}
