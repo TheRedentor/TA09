@@ -3,7 +3,7 @@ package ejercicio6;
 public class Pelicula {
 	
 	String titulo, director;
-	int duración, edadMinima;
+	int duracion, edadMinima;
 	
 	public String getTitulo() {
 		return titulo;
@@ -21,12 +21,12 @@ public class Pelicula {
 		this.director = director;
 	}
 	
-	public int getDuración() {
-		return duración;
+	public int getDuracion() {
+		return duracion;
 	}
 	
-	public void setDuración(int duración) {
-		this.duración = duración;
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
 	}
 	
 	public int getEdadMinima() {
