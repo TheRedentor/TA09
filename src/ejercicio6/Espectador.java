@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class Espectador {
 	
-	String nombre;
-	int edad;
-	float dinero;
+	private String nombre;
+	private int edad;
+	private float dinero;
 	
+
 	public Espectador() {
 		super();
 		Random r1 = new Random();
@@ -16,8 +17,6 @@ public class Espectador {
 		this.edad = r1.nextInt(90);
 		this.dinero = r2.nextInt(50);
 	}
-	
-	
 
 	public Espectador(String nombre) {
 		super();
