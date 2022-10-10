@@ -3,6 +3,7 @@ package ejercicio2;
 public class Ejercicio2App {
 
 	public static void main(String[] args) {
+		
 		Serie serie = new Serie("Peaky Blinders", "Steven Knight", "drama", 6, true);
 		Serie serie2 = new Serie();
 		//serie3 posee el género incorrecto
