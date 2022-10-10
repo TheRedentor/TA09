@@ -74,6 +74,13 @@ public class Videojuego implements Entregable{
 	public void setHorasEstimadas(int horasEstimadas) {
 		this.horasEstimadas = horasEstimadas;
 	}
+
+	@Override
+	public String toString() {
+		return "Videojuego [titulo=" + titulo + ", genero=" + genero + ", company=" + company + ", horasEstimadas="
+				+ horasEstimadas + ", entregado=" + entregado + "]";
+	}
+	
 	
 	
 }
