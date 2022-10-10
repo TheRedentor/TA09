@@ -1,12 +1,14 @@
 package ejercicio2;
 
 public class Videojuego implements Entregable{
+	// Declaración de Variables
 	private String titulo, genero, company;
 	private int horasEstimadas;
 	private boolean entregado;
 	private final int HORAS_ESTIMADAS_DEF = 10;
 	private final boolean ENTREGADO_DEF = false;
 	
+	// Constructores
 	public Videojuego() {
 		this.titulo ="";
 		this.genero ="";
@@ -31,6 +33,7 @@ public class Videojuego implements Entregable{
 		this.entregado=ENTREGADO_DEF;
 	}
 	
+	// Compara las horas estimadas de los videojuegos
 	public Videojuego compareTo(Videojuego videojuego1) {
 		if(horasEstimadas>videojuego1.getHorasEstimadas()) {
 			return new Videojuego(titulo, genero, company, horasEstimadas);
@@ -51,6 +54,7 @@ public class Videojuego implements Entregable{
 		return entregado;
 	}
 	
+	// Getters y Setters
 	public String getTitulo() {
 		return titulo;
 	}

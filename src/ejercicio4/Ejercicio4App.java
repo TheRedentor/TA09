@@ -3,7 +3,7 @@ package ejercicio4;
 public class Ejercicio4App {
 
 	public static void main(String[] args) {
-		
+		// Declaración de Variable
 		Raices ejemplo = new Raices(10, 25, 15);
 		ejemplo.calcular();
 		System.out.println("------------------");

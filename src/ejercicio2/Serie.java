@@ -1,14 +1,15 @@
 package ejercicio2;
 
 public class Serie implements Entregable {
-
+	// DeclaraciÃ³n de Variables
 	private String titulo, creador, genero;
 	private int nTemporadas;
 	private boolean entregado;
 
 	private final int N_TEMPORADAS_DEF = 3;
 	private final boolean ENTREGADO_DEF = false;
-
+	
+	// Constructores
 	public Serie() {
 		this.titulo = "";
 		this.creador = "";
@@ -32,19 +33,21 @@ public class Serie implements Entregable {
 		this.nTemporadas = nTemporadas;
 	}
 	
+	// Imprime los datos de la serie
 	public void imprimirDatos() {
 		System.out.println("Titulo: " + titulo);
 		System.out.println("Creador: " + creador);
-		System.out.println("Género: " + genero);
-		System.out.println("Nº temporadas: " + nTemporadas);
+		System.out.println("Gï¿½nero: " + genero);
+		System.out.println("Nï¿½ temporadas: " + nTemporadas);
 		if(entregado) {
-			System.out.println("Entregada: sí");
+			System.out.println("Entregada: sï¿½");
 		} else {
 			System.out.println("Entregada: no");
 		}
 		
 	}
 	
+	// Comprueba que el gÃ©nero sea vÃ¡lido
 	public String checkGenero(String genero) {
 		boolean esValido = false;
 		for(Generos gen : Generos.values()) {
@@ -66,7 +69,8 @@ public class Serie implements Entregable {
 	public boolean isEntregado() {
 		return entregado;
 	}
-
+	
+	// Getters y Setters
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
@@ -103,6 +107,7 @@ public class Serie implements Entregable {
 		return nTemporadas;
 	}
 	
+	// Compara las temporadas de las series
 	public Serie compareTo(Serie s) {
 		if (nTemporadas>s.getnTemporadas()) {
 			return new Serie(titulo, creador, genero, nTemporadas);

@@ -26,7 +26,7 @@ public class Profesor extends Persona {
 		return "Profesor [materia=" + materia + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + ", asistio=" + asistio + "]";
 	}
 	
-	//Método para generar la asistencia del profesor
+	//Mï¿½todo para generar la asistencia del profesor
 	@Override
 	public boolean asistenciaAula() {
 		Random r = new Random();
