@@ -10,7 +10,7 @@ public class Ejercicio5App {
         Alumno[] alumnos = Metodos.iniciarAlumnos();
         
         //Imprimimos las clases del día
-        Metodos.imprimirHayClases(aulas, profes, alumnos);
+        //Metodos.imprimirHayClases(aulas, profes, alumnos);
         
         //Imprimimos los alumnos dividos por géneros
         Metodos.imprimirAlumnosPorGenero(alumnos);

@@ -35,10 +35,10 @@ public class Serie implements Entregable {
 	public void imprimirDatos() {
 		System.out.println("Titulo: " + titulo);
 		System.out.println("Creador: " + creador);
-		System.out.println("GÃ©nero: " + genero);
-		System.out.println("NÂ° temporadas: " + nTemporadas);
+		System.out.println("Género: " + genero);
+		System.out.println("Nº temporadas: " + nTemporadas);
 		if(entregado) {
-			System.out.println("Entregada: sÃ­");
+			System.out.println("Entregada: sí");
 		} else {
 			System.out.println("Entregada: no");
 		}

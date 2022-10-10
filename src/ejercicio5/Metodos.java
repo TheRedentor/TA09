@@ -5,7 +5,6 @@ import ejercicio5.Materia;
 import ejercicio5.Profesor;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import ejercicio5.Alumno;
 
@@ -25,7 +24,7 @@ public class Metodos {
 	public static Profesor[] iniciarProfesore() {
 		Profesor[] profesores = new Profesor[3];
 		profesores[0] = new Profesor("Jose", 35, "hombre", Materia.matematicas.toString());
-		profesores[1] = new Profesor("MarÔøΩa", 45, "mujer", Materia.filosofia.toString());
+		profesores[1] = new Profesor("Mar√≠a", 45, "mujer", Materia.filosofia.toString());
 		profesores[2] = new Profesor("Pepe", 60, "hombre", Materia.fisica.toString());
 
 		return profesores;
@@ -37,7 +36,7 @@ public class Metodos {
 
 		alumnos[0] = new Alumno("Pepe", 13, "hombre", 7);
 		alumnos[1] = new Alumno("Maria", 12, "mujer", 9);
-		alumnos[2] = new Alumno("Luis", 12, "hombre", 5);
+		alumnos[2] = new Alumno("Luis", 12, "hombre", 4);
 		alumnos[3] = new Alumno("Oscar", 15, "hombre", 6);
 		alumnos[4] = new Alumno("Ana", 14, "mujer", 7);
 		alumnos[5] = new Alumno("Jaume", 13, "hombre", 8);
@@ -49,7 +48,7 @@ public class Metodos {
 		return alumnos;
 	}
 
-	// Este mÈtodo determinar· si habr· clases o no
+	// Este m√©todo determinar√° si habr√° clases o no
 	public static void imprimirHayClases(Aula aulas[], Profesor profes[], Alumno alumnos[]) {
 		// simulaci√≥n de si hay clases o no
 		for (int i = 0; i < profes.length; i++) {
@@ -65,7 +64,7 @@ public class Metodos {
 		}
 	}
 	
-	// Este mÈtodo  imprimir· los alumnos y alumnas por separado
+	// Este m√©todo  imprimir√° los alumnos y alumnas por separado
 	public static void imprimirAlumnosPorGenero (Alumno alumnos[]) {
 		ArrayList<Alumno> hombres = new ArrayList<>();
 		ArrayList<Alumno> mujeres = new ArrayList<>();
@@ -88,9 +87,9 @@ public class Metodos {
 		});
 	}
 	
-	// Este mÈtodo mostrar· las aulas que si realizaran clase
+	// Este m√©todo mostrar√° las aulas que si realizaran clase
 	public static void mostrarAula(Aula aulas[], Profesor profes[], Alumno alumnos[], int j) {
-		System.out.println("Aula N∫ "+ (j+1));
+		System.out.println("Aula N¬∫ "+ (j+1));
 		System.out.println("\nMateria: "+aulas[j].getMateria());
 		
 		for (int i = 0; i < profes.length; i++) {

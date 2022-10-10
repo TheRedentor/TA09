@@ -6,7 +6,17 @@ public class Ejercicio2App {
 
 		Serie[] series = iniciarSeries();
 		Videojuego[] videojuegos = iniciarVideojuegos();
-
+		
+		series[1].entregar();
+		series[4].entregar();
+		
+		videojuegos[2].entregar();
+		videojuegos[3].entregar();
+		
+		devolucion(series, videojuegos);
+		
+		compararDuracion(series, videojuegos);
+		
 	}
 
 	public static Serie[] iniciarSeries() {
@@ -33,4 +43,48 @@ public class Ejercicio2App {
 		return videojuegos;
 	}
 
+	public static void devolucion(Serie[] series, Videojuego[] videojuegos) {
+		int contS = 0;
+		int contV = 0;
+		for (int i = 0; i < series.length; i++) {
+			if(series[i].isEntregado()) {
+				series[i].imprimirDatos();
+				contS++;
+				series[i].devolver();
+			}
+		}
+		
+		System.out.println("\nSe han entregado "+contS+" series.\n");
+		
+		for (int i = 0; i < videojuegos.length; i++) {
+			if(videojuegos[i].isEntregado()) {
+				System.out.println(videojuegos[i].toString());
+				contV++;
+				videojuegos[i].devolver();
+			}
+		}
+		
+		System.out.println("Se han entregado "+contV+" videojuegos.");
+		
+	}
+
+	public static void compararDuracion(Serie[] series, Videojuego[] videojuegos) {
+		
+		Serie s = new Serie();
+		Videojuego v = new Videojuego();
+		
+		for (int i = 0; i < series.length; i++) {
+			s = series[i].compareTo(series[i]);
+		}
+		
+		System.out.println("\nEsta es la serie con más temporadas:");
+		s.imprimirDatos();
+		
+		for (int i = 0; i < videojuegos.length; i++) {
+			v = videojuegos[i].compareTo(videojuegos[i]);
+		}
+		
+		System.out.println("\nEste es el videojuego con más horas estimadas: ");
+		System.out.println(v.toString());
+	}
 }
