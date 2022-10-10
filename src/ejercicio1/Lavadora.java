@@ -18,4 +18,18 @@ public class Lavadora extends Electrodomestico {
 		super(precioBase,color,consumoEnergetico,peso);
 		this.carga = carga;
 	}
+	
+	public double getCarga() {
+		return carga;
+	}
+
+	public int precioFinal() {
+		int precio = super.precioFinal();
+		
+		if(getCarga()>30) {
+			precio = precio + 50;
+		}
+		
+		return precio;
+	}
 }
