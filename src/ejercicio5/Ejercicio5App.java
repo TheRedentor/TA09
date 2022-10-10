@@ -1,19 +1,18 @@
 package ejercicio5;
 
-import java.util.Arrays;
 
 public class Ejercicio5App {
 
 	public static void main(String[] args) {
+		//Inicializamos los objetos
 		Aula[] aulas = Metodos.iniciarAulas();
         Profesor[] profes = Metodos.iniciarProfesore();
         Alumno[] alumnos = Metodos.iniciarAlumnos();
-
-       /* System.out.println(Arrays.toString(aulas));
-        System.out.println(Arrays.toString(alumnos));
-        System.out.println(Arrays.toString(profes)); */
         
+        //Imprimimos las clases del día
         Metodos.imprimirHayClases(aulas, profes, alumnos);
+        
+        //Imprimimos los alumnos dividos por géneros
         Metodos.imprimirAlumnosPorGenero(alumnos);
 		
 	}

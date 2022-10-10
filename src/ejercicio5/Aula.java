@@ -8,8 +8,8 @@ public class Aula {
 	private int numMaxEstudiantes;
 	private String materia;
 	
-	// Constructores
 	
+	// Constructor por defecto
 	public Aula() {
 		super();
 		this.idNum=0;
@@ -17,7 +17,7 @@ public class Aula {
 		this.materia = "";
 	}
 
-	
+	// Constructor con todos los atributos
 	public Aula(int idNum, int numMaxEstudiantes, String materia) {
 		super();
 		this.idNum = idNum;
@@ -25,7 +25,7 @@ public class Aula {
 		this.materia = materia;
 	}
 
-
+	//MÈtodo para comprobar si hay clase
 	public boolean hayClases(Alumno[] alumnos, Profesor profesor) {
 
 		//Si el profesor asisti√≥ y es el profesor de la misma materia del aula entonces me fijo la asistencia de los alumnos, est
@@ -47,11 +47,13 @@ public class Aula {
 		}
 	}
 	
+	// toString para mostrar los atributos de la clase
 	@Override
 	public String toString() {
 		return "Aula [idNum=" + idNum + ", numMaxEstudiantes=" + numMaxEstudiantes + ", materia=" + materia + "]";
 	}
 	
+	// Getters
 	public String getMateria() {
 		return materia;
 	}

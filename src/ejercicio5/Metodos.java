@@ -11,6 +11,7 @@ import ejercicio5.Alumno;
 
 public class Metodos {
 
+	// Metodo para inicializar las aulas
 	public static Aula[] iniciarAulas() {
 		Aula[] aulas = new Aula[3];
 		aulas[0] = new Aula(1, 5, Materia.filosofia.toString());
@@ -20,6 +21,7 @@ public class Metodos {
 		return aulas;
 	}
 
+	// Metodo para inicializar los profesores
 	public static Profesor[] iniciarProfesore() {
 		Profesor[] profesores = new Profesor[3];
 		profesores[0] = new Profesor("Jose", 35, "hombre", Materia.matematicas.toString());
@@ -29,6 +31,7 @@ public class Metodos {
 		return profesores;
 	}
 
+	// Metodo para inicializar los alumnos
 	public static Alumno[] iniciarAlumnos() {
 		Alumno[] alumnos = new Alumno[10];
 
@@ -46,6 +49,7 @@ public class Metodos {
 		return alumnos;
 	}
 
+	// Este método determinará si habrá clases o no
 	public static void imprimirHayClases(Aula aulas[], Profesor profes[], Alumno alumnos[]) {
 		// simulaciÃ³n de si hay clases o no
 		for (int i = 0; i < profes.length; i++) {
@@ -61,6 +65,7 @@ public class Metodos {
 		}
 	}
 	
+	// Este método  imprimirá los alumnos y alumnas por separado
 	public static void imprimirAlumnosPorGenero (Alumno alumnos[]) {
 		ArrayList<Alumno> hombres = new ArrayList<>();
 		ArrayList<Alumno> mujeres = new ArrayList<>();
@@ -83,8 +88,9 @@ public class Metodos {
 		});
 	}
 	
+	// Este método mostrará las aulas que si realizaran clase
 	public static void mostrarAula(Aula aulas[], Profesor profes[], Alumno alumnos[], int j) {
-		System.out.println("Aula NÂº "+ (j+1));
+		System.out.println("Aula Nº "+ (j+1));
 		System.out.println("\nMateria: "+aulas[j].getMateria());
 		
 		for (int i = 0; i < profes.length; i++) {
