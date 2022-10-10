@@ -13,10 +13,16 @@ public class Television {
 		this.sintonizadorTDT =SINTONIZADOR_TDT_DEF;
 	}
 
-	public Television(int precio, int peso) {
-		super(precio, peso);
+	public Television(int precioBase, int peso) {
+		super(precioBase, peso);
 		this.resolucion =RESOLUCION_DEF;
 		this.sintonizadorTDT =SINTONIZADOR_TDT_DEF;
+	}
+	
+	public Television(int precioBase, int peso, String color, char consumoEnergetico, double resolucion, boolean sintonizadorTDT) {
+		super(precioBase, peso, color, consumoEnergetico);
+		this.resolucion = resolucion;
+		this.sintonizadorTDT = sintonizadorTDT;
 	}
 	
 }
